@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <>
-      <header className="mx-auto  mt-1 bg-white sticky top-0 dark:bg-gray-950">
-        <div className="max-w-7xl container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
+      <header className="mx-auto z-40 mt-1 bg-white sticky top-0 dark:bg-gray-950">
+        <div className="max-w-7xl container mx-auto flex h-24 items-center justify-between px-4 md:px-6 relative z-50">
           <Link className="flex items-center space-x-2" href="#">
             {/* <SchoolIcon className="h-6 w-6" /> */}
             <Image
@@ -15,7 +15,7 @@ export default function Navbar() {
             />
             <span className="sr-only">Acme School</span>
             <div>
-              <span className="font-medium font-garamond text-xl text-yellow-500 text-border-lowblack">
+              <span className="font-medium font-garamond text-xl text-yellow-400 text-border-lowblack">
                 Brilliant United Academy
               </span>
               <p className="text-sm text-center font-josefin">Tamghas, Gulmi</p>
