@@ -1,6 +1,20 @@
+"use client";
+
+import React, { useRef, useEffect } from "react";
 import Link from "next/link";
+import gsap from "gsap";
 import Image from "next/image";
 export default function Navbar() {
+  const loginLinkRef = useRef(null);
+
+  useEffect(() => {
+    // Apply a GSAP animation to the login link
+    gsap.fromTo(
+      loginLinkRef.current,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+    );
+  }, []);
   return (
     <>
       <header className="mx-auto z-40 mt-1 bg-white sticky top-0 dark:bg-gray-950">
@@ -73,7 +87,8 @@ export default function Navbar() {
           </nav>
           <div className="space-x-6">
             <Link
-              className="text-white bg-blue-500 py-3 px-4 shadow-gray-400 border border-gray-50 shadow-md rounded-t-full rounded-bl-full transition-transform font-medium hover:scale-105 font-garamond tracking-wider "
+              ref={loginLinkRef}
+              className="text-white bg-indigo-600 py-3 px-4 shadow-gray-400 border border-gray-50 shadow-md rounded-t-full rounded-bl-full transition-transform font-medium hover:scale-105 font-garamond tracking-wider"
               href="/Login"
             >
               Login

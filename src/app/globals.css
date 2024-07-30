@@ -4,7 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+::selection {
+  background-color: #4f46e5; /* Indigo color */
+  color: #ffffff; /* White text */
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;

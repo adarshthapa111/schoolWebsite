@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import Teachers from "./components/Teachers";
+import FeedbackSection from "./components/FeedbackSection"
+
 export default function Home() {
   return (
     <>
@@ -12,12 +14,12 @@ export default function Home() {
               <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-[1fr_550px]">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <h1 className="text-3xl font-bold  tracking-wide sm:text-7xl text-gray-800 font-josefin">
+                    <h1 className="text-3xl font-bold  tracking-wide sm:text-7xl text-gray-800 font-garamond">
                       <span className="text-yellow-400 text-border-black">
                         Discover{" "}
                       </span>
                       the Best Education at{" "}
-                      <span className=" bg-gradient-to-r from-blue-600 to via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                      <span className=" bg-gradient-to-r from-indigo-600 to via-indigo-600 to-blue-600 bg-clip-text text-transparent">
                         Brilliant United Academy{" "}
                         <span className="text-yellow-500 text-5xl text-border-black">
                           ✦
@@ -81,9 +83,23 @@ export default function Home() {
         <div>
           <section className="w-full py-12 md:py-24 lg:py-32">
             <div className="container max-w-7xl mx-auto px-4 md:px-6">
-              <h2 className="text-xl md:text-4xl xl:text-6xl font-garamond font-semibold border-b-4 border-blue-500 inline">
-                About
+              <h2 className="text-xl md:text-4xl xl:text-6xl font-garamond font-semibold">
+                About <span className="text-indigo-600">Us</span>
               </h2>
+
+              <svg
+                className="w-46 h-6"
+                viewBox="0 0 60 10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M 0 5 Q 5 0, 10 5 T 20 5 T 30 5 T 40 5 T 50 5 T 60 5 T 70 5 T 80 5 T 90 5 T 100 5 T 110 5 T 120 5 T 130 5 T 140 5 T 150 5"
+                  stroke="blue"
+                  fill="transparent"
+                  stroke-width="2"
+                />
+              </svg>
+
               <div className="my-6 grid space-y-6 items-center gap-6 lg:grid-cols-2 lg:gap-12">
                 <img
                   alt="About Image"
@@ -94,7 +110,7 @@ export default function Home() {
                 />
                 <div className="flex flex-col justify-center">
                   <div className="space-y-6">
-                    <h2 className="text-3xl font-josefin font-bold tracking-tighter sm:text-5xl text-blue-600">
+                    <h2 className="text-3xl font-garamond font-bold tracking-wide sm:text-6xl text-indigo-600">
                       Empowering Minds,{" "}
                       <span className="text-border-midblack text-gray-50">
                         Shaping Futures
@@ -123,7 +139,7 @@ export default function Home() {
                   </div>
                   <div className="mt-12">
                     <Link
-                      className="px-6 w-fit tracking-wider text-lg bg-blue-600 py-4 rounded-tl-full rounded-b-full text-white font-garamond  shadow-gray-400 border-2 border-white font-medium"
+                      className="px-6 w-fit tracking-wider text-lg bg-indigo-600 py-4 rounded-tl-full rounded-b-full text-white font-garamond  shadow-gray-400 border-2 border-white font-medium"
                       href="#"
                     >
                       Learn More →
@@ -133,15 +149,98 @@ export default function Home() {
               </div>
             </div>
           </section>
+          <section>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+              <div className="flex flex-col md:flex-row items-center">
+                <div className="md:w-1/2 relative mb-8 md:mb-0">
+                  {/* <div className="absolute top-0 shadow-inner shadow-gray-400 w-96 h-96 bg-yellow-300 rounded-2xl -z-10 transform -translate-x-4 translate-y-4 mx-14"></div> */}
+                  <Image
+                    src="/images/kids.png"
+                    alt="Student"
+                    width={400}
+                    height={800}
+                    className="bg-yellow-400 w-full h-96 object-cover max-w-[300px] md:max-w-[400px] rounded-t-[100px] rounded-bl-[100px] z-10 relative mx-auto"
+                  />
+                  <div className="absolute top-0 left-0 w-full h-full">
+                    <svg
+                      className="absolute top-0 left-0 w-16 h-12 md:w-16 md:h-16 text-indigo-500"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z"
+                      />
+                    </svg>
+                    <svg
+                      className="absolute bottom-0 right-0 w-12 h-12 md:w-16 md:h-16 text-red-500"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div className="md:w-1/2 mt-8 md:mt-0 md:pl-4 lg:pl-8">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-garamond xl:text-6xl">
+                    Benefits That Contribute
+                    <br />
+                    <span className="text-indigo-600">
+                      Development And Growth
+                    </span>
+                    <br />
+                    Of Students
+                  </h2>
+                  <p className="text-sm md:text-base text-gray-600 mb-6">
+                    Schools provide numerous benefits that contribute to the
+                    holistic development and growth of students. Here are some
+                    key benefits of attending school:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {[
+                      "Education",
+                      "Socialization",
+                      "Social Support",
+                      "Cultural Diversity",
+                      "Lifelong Learning",
+                      "Career Preparation",
+                    ].map((benefit, index) => (
+                      <div
+                        key={index}
+                        className="border-b-2 border-red-500 pb-1"
+                      >
+                        <span className="font-semibold text-sm md:text-base font-josefin">
+                          {benefit}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           <section className="max-w-7xl mx-auto">
             {/* <h4 className="text-6xl tracking-wider inline font-semibold font-garamond py-4">Our Offering </h4>
             <p className="text-gray-400 py-2">Your trust us what make us stronger. We always try to stand with your trust...</p> */}
             <div className="container mx-auto px-4 py-8">
-              <h2 className="text-4xl font-bold text-center mb-4 font-garamond tracking-wider lg:text-6xl">
-                What <span className="text-gray-50 text-border-black">We</span>{" "}
-                <span className="text-blue-600">Offer ?</span>
+              <h2 className="text-4xl font-bold inline mb-4 font-garamond tracking-wider lg:text-6xl">
+                What We
+                <span className="text-indigo-600"> Offer ?</span>
               </h2>
-              <p className="text-center mb-8">
+              <svg
+                className="w-60 h-6"
+                viewBox="0 0 100 10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M 0 5 Q 5 0, 10 5 T 20 5 T 30 5 T 40 5 T 50 5 T 60 5 T 70 5 T 80 5 T 90 5 T 100 5 T 110 5 T 120 5 T 130 5 T 140 5 T 150 5 T 160 5 T 170 5 T 180 5 T 190 5 T 200 5 T 210 5 T 220 5 T 230 5 T 240 5 T 250 5 T 260 5 T 270 5 T280 5 T 290 5 T 300 5 T"
+                  stroke="blue"
+                  fill="transparent"
+                  stroke-width="2"
+                />
+              </svg>
+              <p className="p-4 mb-8">
                 Trust us to provide innovative solutions tailored to your
                 specific needs and goals
               </p>
@@ -253,75 +352,7 @@ export default function Home() {
             <Teachers />
           </section>
           <section>
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 relative mb-8 md:mb-0">
-                  <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-300 rounded-full -z-10 transform -translate-x-4 translate-y-4"></div>
-                  <Image
-                    src="/images/"
-                    alt="Student"
-                    width={400}
-                    height={800}
-                    className="w-full h-96 object-cover max-w-[300px] md:max-w-[400px] z-10 relative mx-auto"
-                  />
-                  <div className="absolute top-0 left-0 w-full h-full">
-                    <svg
-                      className="absolute top-0 left-0 w-12 h-12 md:w-16 md:h-16 text-indigo-500"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z"
-                      />
-                    </svg>
-                    <svg
-                      className="absolute bottom-0 right-0 w-12 h-12 md:w-16 md:h-16 text-red-500"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="md:w-1/2 mt-8 md:mt-0 md:pl-4 lg:pl-8">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-garamond xl:text-6xl">
-                    Benefits That Contribute
-                    <br />
-                    <span className="text-indigo-600">
-                      Development And Growth
-                    </span>
-                    <br />
-                    Of Students
-                  </h2>
-                  <p className="text-sm md:text-base text-gray-600 mb-6">
-                    Schools provide numerous benefits that contribute to the
-                    holistic development and growth of students. Here are some
-                    key benefits of attending school:
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {[
-                      "Education",
-                      "Socialization",
-                      "Social Support",
-                      "Cultural Diversity",
-                      "Lifelong Learning",
-                      "Career Preparation",
-                    ].map((benefit, index) => (
-                      <div
-                        key={index}
-                        className="border-b-2 border-red-500 pb-1"
-                      >
-                        <span className="font-semibold text-sm md:text-base font-josefin">
-                          {benefit}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+            <FeedbackSection/>
           </section>
         </div>
         <div></div>
